@@ -1,5 +1,5 @@
 <?php
-$conn = new mysqli("localhost", "root", "", "carousel_slider_db");
+$conn = new mysqli("localhost", "root", "", "moteur_de_recherche_db");
 
 $msg = '';
 
@@ -8,7 +8,7 @@ if(isset($_POST['upload'])){
 
     $path = "images/".$image;
 
-    $sql = $conn->query("INSERT INTO sliders (image_path) VALUES ('$path')");
+    $sql = $conn->query("INSERT INTO actualite (image_path) VALUES ('$path')");
 
     if($sql) {
         move_uploaded_file($_FILES['image']['tmp_name'], $path );
@@ -21,7 +21,7 @@ if(isset($_POST['upload'])){
      }
 
 }
-$result = $conn->query("SELECT * FROM sliders")
+$result = $conn->query("SELECT * FROM actualite")
 ?>
 
 
