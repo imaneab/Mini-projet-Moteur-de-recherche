@@ -1,6 +1,6 @@
 <?php
-$conn = new mysqli("localhost", "root", "", "carousel_slider_db");
-$result = $conn->query("SELECT * FROM sliders")
+$conn = new mysqli("localhost", "root", "", "moteur_de_recherche_db");
+$result = $conn->query("SELECT * FROM actualite")
 ?>
 <!DOCTYPE html>
 <html lang="en">
